@@ -9,7 +9,7 @@ If Hi-ClockFlow helps for your works, please cite our paper in ICCAD 2019 ^_^:
 
     Hi-ClockFlow: Multi-Clock Dataflow Automation and Throughput Optimization in High-Level Synthesis. IEEE/ACM 2019 International Conference On Computer Aided Design (ICCAD) 
 
-
+***
 
 ## Multi-Clock Dataflow DSE formulation
 
@@ -18,6 +18,9 @@ In the design space, the application is described as dataflow, which consists of
 The problem formulation is shown below:
 
 <img src="https://github.com/zslwyuan/Light-HLS/blob/master/Images/hi-clockflow-formulation.png" width="800"> 
+
+
+***
 
 ## Pushing-Relaxation Heuristic Algorithm 
 
@@ -29,5 +32,10 @@ Hi-ClockFlow solves this problem based on pushing-relaxation heuristic algorithm
 The detailed codes are provided in **[here](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc)**
 Compared to common usage of Light-HLS, in the configuration file of Hi-ClockFlow, as **[an example](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/convs_settings/conv_config.txt)**, users need to specify the resource constraints and the initial clock for the modules in dataflow.
 
-The example projects of multi-clock dataflow are provided via Google Drive since we go through the synthesis, placement and routing for easier evaluation.
+
+***
+
+## Hardware Implemenation of Multi-Clock Dataflow
+
+The example projects of multi-clock dataflow are provided via **[Google Drive](https://drive.google.com/drive/folders/1WC4ndj2plVBTll_GDR3XtHzC8KRjG0NG?usp=sharing)** since we go through the synthesis, placement and routing for easier evaluation.
 
