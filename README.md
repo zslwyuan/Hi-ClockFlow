@@ -30,8 +30,7 @@ Hi-ClockFlow solves this problem based on pushing-relaxation heuristic algorithm
 <img src="https://github.com/zslwyuan/Light-HLS/blob/master/Images/pushrelax_code.png" width="400"> 
 
 The detailed codes are provided in **[here](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc)**
-Compared to common usage of Light-HLS, in the configuration file of Hi-ClockFlow, as **[an example](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/convs_settings/conv_config.txt)**, users need to specify the resource constraints and the initial clock for the modules in dataflow.
-
+Compared to common usage of Light-HLS, in the configuration file of Hi-ClockFlow, as **[an example](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/convs_settings/conv_config.txt)**, users need to specify the resource constraints and the initial clock for the modules in dataflow. The trace of this heuristic algorithm will be recorded in a log file "pushing\_relaxtion_log.txt".
 
 ***
 
