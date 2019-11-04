@@ -38,4 +38,5 @@ Compared to common usage of Light-HLS, in the configuration file of Hi-ClockFlow
 ## Hardware Implemenation of Multi-Clock Dataflow
 
 The example projects of multi-clock dataflow are provided via **[Google Drive](https://drive.google.com/drive/folders/1WC4ndj2plVBTll_GDR3XtHzC8KRjG0NG?usp=sharing)** since we go through the synthesis, placement and routing for easier evaluation.
+The example projects are implemented for Zedboard, a SoC evaluation platform. You can launch the application in VivadoSDK, check the run time and validate the results.
 
