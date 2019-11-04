@@ -11,13 +11,15 @@ If Hi-ClockFlow helps for your works, please cite our paper in ICCAD 2019 ^_^:
 
 
 
-## Pushing-Relaxation Heuristic Algorithm 
+## Multi-Clock Dataflow DSE formulation
 
 In the design space, the application is described as dataflow, which consists of multiple modules. Each module can has its own setting of HLS directives, i.e. parallelism, and clock frequency. Hi-ClockFlow will find the proper setting for each module to maximize the overall throughput of the application while meeting the resource constraint of the target FPGA device and the number constraint of clock domains.
 
 The problem formulation is shown below:
 
 <img src="https://github.com/zslwyuan/Light-HLS/blob/master/Images/hi-clockflow-formulation.png" width="800"> 
+
+## Pushing-Relaxation Heuristic Algorithm 
 
 Hi-ClockFlow solves this problem based on pushing-relaxation heuristic algorithm.
 
