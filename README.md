@@ -11,7 +11,7 @@ If Hi-ClockFlow helps for your works, please cite [our paper in ICCAD 2019](http
 
 ***
 
-## Multi-Clock Dataflow DSE formulation
+## 1. Multi-Clock Dataflow DSE formulation
 
 In the design space, the application is described as dataflow, which consists of multiple modules. Each module can has its own setting of HLS directives, i.e. parallelism, and clock frequency. Hi-ClockFlow will find the proper setting for each module to maximize the overall throughput of the application while meeting the resource constraint of the target FPGA device and the number constraint of clock domains.
 
@@ -22,7 +22,7 @@ The problem formulation is shown below:
 
 ***
 
-## Pushing-Relaxation Heuristic Algorithm 
+## 2. Pushing-Relaxation Heuristic Algorithm 
 
 Hi-ClockFlow solves this problem based on pushing-relaxation heuristic algorithm.
 
@@ -42,8 +42,9 @@ We keep updating the strategy of this heuristic algorithm for the setting of dir
 
 ***
 
-## Hardware Implemenation of Multi-Clock Dataflow
+## 3. Hardware Implemenation of Multi-Clock Dataflow
 
+According to the information from Hi-ClockFlow, designers can implement multi-clock dataflow for various applications.
 The example projects of multi-clock dataflow are provided via **[Google Drive](https://drive.google.com/drive/folders/1WC4ndj2plVBTll_GDR3XtHzC8KRjG0NG?usp=sharing)** since we go through the synthesis, placement and routing for easier evaluation.
 The example projects are implemented for Zedboard, a SoC evaluation platform. You can launch the application in VivadoSDK, check the run time and validate the results.
 
