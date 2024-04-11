@@ -36,7 +36,7 @@ Hi-ClockFlow solves this problem based on pushing-relaxation heuristic algorithm
 The detailed codes are provided in **[here](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/)**
 Compared to common usage of Light-HLS, in the configuration file of Hi-ClockFlow, as **[an example](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/convs_settings/conv_config.txt)**, users need to specify the resource constraints and the initial clock for the modules in dataflow. The trace of this heuristic algorithm will be recorded in a log file "pushing\_relaxtion_log.txt".
 
-The main flow of Hi-ClockFlow is implememnted in [Hi_ClockFlow.cc](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc). After [pre-processing of source code](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc#L45) and [analysis of the IR code](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc#L76-#100), Hi-ClockFlow begins [its PUSH-RELAX flow](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc#L133-#404), where it tries to PUSH the HLS directives and when PUSH trial failed, it will update the clock combination by RELAX. Please note that these decision is made by these [lines](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc#L262-#402).
+The main flow of Hi-ClockFlow is implememnted in [Hi_ClockFlow.cc](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc). After [pre-processing of source code](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc#L45) and [analysis of the IR code](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc#L76-#100), Hi-ClockFlow begins [its PUSH-RELAX flow](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc#L133-#404), where it tries to PUSH the HLS directives and when PUSH trial failed, it will update the clock combination by RELAX. Please note that this decision is made by these [lines](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/Hi_ClockFlow.cc#L262-#402).
 
 The **PUSH** operation is implemented with function [tryUpdateHLSDirectives()](https://github.com/zslwyuan/Light-HLS/blob/master/Tests/Hi_ClockFlow/ConfigGen.cc#L1025-L1292), in which Hi-ClockFlow find next combination of directives, including loop unrolling, loop pipelining and array partitioning, for the design to optimize the multi-clock dataflow performance. 
 
@@ -46,9 +46,9 @@ We keep updating the strategy of this heuristic algorithm for the setting of dir
 
 ***
 
-## 3. Hardware Implemenation of Multi-Clock Dataflow
+## 3. Hardware Implementation of Multi-Clock Dataflow
 
 According to the information from Hi-ClockFlow, designers can implement multi-clock dataflow for various applications.
-The example projects of multi-clock dataflow are provided via **[Google Drive](https://drive.google.com/drive/folders/1WC4ndj2plVBTll_GDR3XtHzC8KRjG0NG?usp=sharing)** since we go through the synthesis, placement and routing for easier evaluation.
-The example projects are implemented for Zedboard, a SoC evaluation platform. You can launch the application in VivadoSDK, check the run time and validate the results.
+The example projects of multi-clock dataflow are provided via **[WeiYun Drive](https://share.weiyun.com/GjkOrXiR)** since we go through the synthesis, placement, and routing for easier evaluation.
+The example projects are implemented for Zedboard, a SoC evaluation platform. You can launch the application in VivadoSDK, check the run time, and validate the results.
 
